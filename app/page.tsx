@@ -197,10 +197,6 @@ export default function Home() {
                   <p>✅ Online & Offline Classes</p>
                   <p>✅ Real-Time Projects</p>
 
-                  <p className="text-green-600 text-3xl font-bold mt-4 mb-5">
-                    ₹7,599
-                  </p>
-
                   <div className="flex gap-3">
                     <a
                       href={`/course/${course.slug}`}
@@ -402,11 +398,10 @@ export default function Home() {
           <h3 className="text-xl font-semibold mb-2">🏢 Office Address</h3>
 
           <p className="text-gray-300 leading-8">
-            A/210 Kaveripattinam,<br />
+            Friends Collection,<br />
             Subramaniyapuram,<br />
-            Third Floor,<br />
-            Indian Oil Opposite,<br />
-            Palacodu to Krishnagiri Road,<br />
+            SKD Palkouva(opp),<br />
+            Thimmapuraam(post),<br />
             Krishnagiri – 635112
           </p>
         </div>

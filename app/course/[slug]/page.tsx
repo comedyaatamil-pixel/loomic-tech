@@ -2,13 +2,12 @@ const courseData: Record<string, any> = {
   python: {
     title: "Python Programming",
     description:
-      "Learn Python from beginner to advanced with practical coding, automation, backend development and real-time projects.",
-    tools: "Python, Django, Flask, MySQL, REST API",
+      "Learn Python from basics to advanced with real-time projects, backend development and automation.",
+    tools: "Python, Django, Flask, MySQL",
     duration: "3 Months",
     mode: "Online & Offline",
     certificate: "Internship Certificate Included",
     internship: "Real-Time Project Training Included",
-    fee: "₹7,599",
     image:
       "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?q=80&w=1400&auto=format&fit=crop",
   },
@@ -16,13 +15,12 @@ const courseData: Record<string, any> = {
   "full-stack": {
     title: "Full Stack Development",
     description:
-      "Build complete websites from frontend to backend using real-time project-based learning.",
+      "Learn frontend and backend development with real-time website projects.",
     tools: "HTML, CSS, JavaScript, React.js, Node.js, MongoDB",
-    duration: "3 Months",
+    duration: "4 Months",
     mode: "Online & Offline",
     certificate: "Internship Certificate Included",
     internship: "Live Project Internship Included",
-    fee: "₹7,599",
     image:
       "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1400&auto=format&fit=crop",
   },
@@ -30,13 +28,12 @@ const courseData: Record<string, any> = {
   "ai-ml": {
     title: "AI & Machine Learning",
     description:
-      "Learn Artificial Intelligence and Machine Learning with practical implementation and model building.",
-    tools: "Python, TensorFlow, NumPy, Pandas",
+      "Build machine learning models with practical implementation and AI tools.",
+    tools: "Python, TensorFlow, Pandas, NumPy",
     duration: "3 Months",
     mode: "Online & Offline",
     certificate: "Internship Certificate Included",
-    internship: "AI Project Internship Included",
-    fee: "₹7,599",
+    internship: "AI Internship Included",
     image:
       "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1400&auto=format&fit=crop",
   },
@@ -44,13 +41,12 @@ const courseData: Record<string, any> = {
   "data-science": {
     title: "Data Science",
     description:
-      "Learn data analysis, visualization and decision-making using real-world datasets.",
-    tools: "Python, Pandas, NumPy, Power BI, Excel",
+      "Learn data analysis, visualization and decision-making with real-world datasets.",
+    tools: "Python, Power BI, Pandas, Excel",
     duration: "3 Months",
     mode: "Online & Offline",
-    certificate: "Internship Certificate Included",
+    certificate: "Certificate Included",
     internship: "Project Internship Included",
-    fee: "₹7,599",
     image:
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1400&auto=format&fit=crop",
   },
@@ -58,13 +54,12 @@ const courseData: Record<string, any> = {
   "cyber-security": {
     title: "Cyber Security",
     description:
-      "Learn ethical hacking, cyber defense and network protection using practical security tools.",
-    tools: "Kali Linux, Networking, Security Tools",
+      "Learn ethical hacking, network security and cyber defense tools.",
+    tools: "Kali Linux, Networking, Burp Suite",
     duration: "3 Months",
     mode: "Online & Offline",
-    certificate: "Internship Certificate Included",
-    internship: "Security Training Included",
-    fee: "₹7,599",
+    certificate: "Certificate Included",
+    internship: "Security Internship Included",
     image:
       "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1400&auto=format&fit=crop",
   },
@@ -72,13 +67,12 @@ const courseData: Record<string, any> = {
   "ui-ux": {
     title: "UI / UX Design",
     description:
-      "Learn UI design, UX research, wireframing and prototyping using modern design tools.",
-    tools: "Figma, Adobe XD, Wireframing, Prototyping",
-    duration: "3 Months",
+      "Learn interface design, user experience research, prototyping and wireframing.",
+    tools: "Figma, Adobe XD, Prototyping",
+    duration: "2 Months",
     mode: "Online & Offline",
-    certificate: "Internship Certificate Included",
+    certificate: "Certificate Included",
     internship: "Design Internship Included",
-    fee: "₹7,599",
     image:
       "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?q=80&w=1400&auto=format&fit=crop",
   },
@@ -86,13 +80,12 @@ const courseData: Record<string, any> = {
   "cloud-computing": {
     title: "Cloud Computing",
     description:
-      "Learn cloud infrastructure, deployment and cloud services with hands-on practical training.",
-    tools: "AWS, Azure, Google Cloud, Linux",
+      "Learn cloud deployment, hosting and cloud infrastructure services.",
+    tools: "AWS, Azure, Google Cloud",
     duration: "3 Months",
     mode: "Online & Offline",
-    certificate: "Internship Certificate Included",
-    internship: "Cloud Project Training Included",
-    fee: "₹7,599",
+    certificate: "Certificate Included",
+    internship: "Cloud Project Included",
     image:
       "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1400&auto=format&fit=crop",
   },
@@ -100,13 +93,12 @@ const courseData: Record<string, any> = {
   "mobile-app-development": {
     title: "Mobile App Development",
     description:
-      "Build Android and mobile applications using modern app development frameworks.",
+      "Build Android and mobile applications using modern frameworks.",
     tools: "Flutter, React Native, Firebase",
-    duration: "3 Months",
+    duration: "4 Months",
     mode: "Online & Offline",
-    certificate: "Internship Certificate Included",
-    internship: "App Development Internship Included",
-    fee: "₹7,599",
+    certificate: "Certificate Included",
+    internship: "App Internship Included",
     image:
       "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1400&auto=format&fit=crop",
   },
@@ -114,13 +106,12 @@ const courseData: Record<string, any> = {
   "software-testing": {
     title: "Software Testing",
     description:
-      "Learn manual and automation testing with testing tools and live project practice.",
-    tools: "Manual Testing, Selenium, Postman, JIRA",
+      "Learn manual testing and automation testing using real tools.",
+    tools: "Selenium, Postman, JIRA",
     duration: "3 Months",
     mode: "Online & Offline",
-    certificate: "Internship Certificate Included",
+    certificate: "Certificate Included",
     internship: "Testing Internship Included",
-    fee: "₹7,599",
     image:
       "https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=1400&auto=format&fit=crop",
   },
@@ -128,13 +119,12 @@ const courseData: Record<string, any> = {
   devops: {
     title: "DevOps Training",
     description:
-      "Learn DevOps workflow, CI/CD pipelines and deployment automation using real-world tools.",
+      "Learn CI/CD, deployment pipelines and DevOps workflows.",
     tools: "Docker, Kubernetes, Jenkins, GitHub Actions",
     duration: "3 Months",
     mode: "Online & Offline",
-    certificate: "Internship Certificate Included",
-    internship: "DevOps Project Training Included",
-    fee: "₹7,599",
+    certificate: "Certificate Included",
+    internship: "DevOps Project Included",
     image:
       "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?q=80&w=1400&auto=format&fit=crop",
   },
@@ -149,48 +139,44 @@ export default async function CoursePage({
   const course = courseData[slug];
 
   if (!course) {
-    return <div className="p-10 text-2xl">Course not found</div>;
+    return <div className="p-10 text-white text-2xl">Course not found</div>;
   }
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-cyan-900 py-20 px-6">
       <div className="max-w-5xl mx-auto">
-
         <img
           src={course.image}
           alt={course.title}
           className="w-full h-[380px] object-cover rounded-3xl mb-10"
         />
 
-        <h1 className="text-5xl font-bold text-blue-700 mb-6">
+        <h1 className="text-5xl font-bold text-white mb-6">
           {course.title}
         </h1>
 
-        <p className="text-lg text-white
-        -700 leading-8 mb-10">
+        <p className="text-lg text-slate-200 leading-8 mb-10">
           {course.description}
         </p>
-<div className="bg-white/10 backdrop-blur-lg rounded-3xl p-10 shadow-lg space-y-4 text-white border border-white/10">
+
+        <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-10 shadow-xl text-white space-y-4">
           <p><strong>Tools & Technologies:</strong> {course.tools}</p>
           <p><strong>Duration:</strong> {course.duration}</p>
           <p><strong>Mode:</strong> {course.mode}</p>
           <p><strong>Certificate:</strong> {course.certificate}</p>
           <p><strong>Internship:</strong> {course.internship}</p>
-          <p className="text-3xl font-bold text-green-600">
-            Course Fee: {course.fee}
-          </p>
         </div>
 
-        
-  <a
-    href="https://docs.google.com/forms/d/e/1FAIpQLSdLr-WCuKRVRkU2wk31pXBTTaUkDjNQKyl15f8v-jJA60_T5g/viewform"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="w-full bg-green-500 hover:bg-green-600 text-white py-3 rounded-xl text-center font-semibold"
-  >
-          Register Now
-        </a>
-
+        <div className="mt-10 text-center">
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdLr-WCuKRVRkU2wk31pXBTTaUkDjNQKyl15f8v-jJA60_T5g/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-green-500 hover:bg-green-600 text-white px-10 py-4 rounded-2xl font-semibold text-lg"
+          >
+            Register Now
+          </a>
+        </div>
       </div>
     </main>
   );
