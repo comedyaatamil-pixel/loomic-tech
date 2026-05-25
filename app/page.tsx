@@ -102,45 +102,73 @@ export default function Home() {
           </a>
         </div>
       </header>
+<section
+  id="home"
+  className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-950 via-blue-950 to-cyan-900 flex items-center"
+>
+  {/* glow background */}
+  <div className="absolute top-10 left-10 w-72 h-72 bg-cyan-400/20 rounded-full blur-3xl animate-pulse"></div>
+  <div className="absolute bottom-10 right-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
 
-      {/* HOME */}
-      <section
-        id="home"
-        className="relative min-h-screen flex items-center justify-center text-center bg-cover bg-center"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1800&auto=format&fit=crop')",
-        }}
-      >
-        <div className="absolute inset-0 bg-black/60"></div>
+  <div className="relative z-10 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
 
-        <div className="relative z-10 text-white max-w-4xl px-6">
-          <h2 className="text-5xl font-bold mb-6">
-            Build Your IT Career with LOOMIC TECH
-          </h2>
+    {/* LEFT CONTENT */}
+    <div className="text-white">
+      <p className="uppercase tracking-[4px] text-cyan-300 mb-4 font-semibold">
+        Welcome to LOOMIC TECH Pvt Ltd
+      </p>
 
-          <p className="text-xl leading-8 mb-10">
-            Learn practical skills through live training, internships and real-time projects.
-          </p>
+      <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
+        Build Your Career in
+        <span className="block text-cyan-300 mt-2">
+          Technology & Innovation
+        </span>
+      </h1>
 
-          <a
-            href="#courses"
-            className="bg-blue-600 px-8 py-4 rounded-full font-semibold"
-          >
-            Explore Courses
-          </a>
-        </div>
-      </section>
+      <p className="text-slate-200 text-xl leading-8 mb-10">
+        Learn through real-time projects, internships, certification,
+        expert mentors and placement-focused training.
+      </p>
 
+      <div className="flex flex-wrap gap-4">
+        <a
+          href="#courses"
+          className="bg-cyan-400 hover:bg-cyan-500 text-black px-8 py-4 rounded-full font-bold transition"
+        >
+          Explore Courses
+        </a>
+
+        <a
+          href="https://wa.me/918807129618"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-bold transition"
+        >
+          Join Internship
+        </a>
+      </div>
+    </div>
+
+    {/* RIGHT IMAGE */}
+    <div className="flex justify-center">
+      <img
+        src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1600&auto=format&fit=crop"
+        alt="LOOMIC TECH"
+        className="w-full max-w-xl rounded-3xl shadow-2xl animate-pulse"
+      />
+    </div>
+
+  </div>
+</section>
       {/* COURSES */}
-      <section
-        id="courses"
-        className="py-24 px-6 bg-gradient-to-b from-slate-50 via-blue-50 to-white"
-      >
+     <section
+  id="courses"
+  className="py-24 px-6 bg-gradient-to-br from-slate-950 via-blue-950 to-cyan-900"
+>
         <div className="max-w-7xl mx-auto">
 
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-blue-700 mb-4">
+           <h2 className="text-4xl font-bold text-white mb-4">        
               Our Professional Courses
             </h2>
           </div>
@@ -163,14 +191,14 @@ export default function Home() {
                     {course.name}
                   </h3>
 
-                  <p className="text-gray-600 mb-4">{course.tools}</p>
+                  <p className="text-slate-300">{course.tools}</p>
 
                   <p>✅ Internship Certificate Included</p>
                   <p>✅ Online & Offline Classes</p>
                   <p>✅ Real-Time Projects</p>
 
                   <p className="text-green-600 text-3xl font-bold mt-4 mb-5">
-                    ₹9,999
+                    ₹7,599
                   </p>
 
                   <div className="flex gap-3">
@@ -202,122 +230,125 @@ export default function Home() {
      {/* ABOUT US */}
 <section
   id="about"
-  className="py-24 px-6 bg-gradient-to-b from-white via-slate-50 to-blue-50"
+  className="py-28 px-6 bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 text-white"
 >
   <div className="max-w-7xl mx-auto">
 
-    {/* Title */}
-    <div className="text-center mb-16">
-      <h2 className="text-4xl md:text-5xl font-bold text-blue-700 mb-6">
-        LOOMIC TECH
+    {/* Heading */}
+    <div className="text-center mb-20">
+      <h2 className="text-4xl md:text-5xl font-bold mb-6">
+        About LOOMIC TECH
       </h2>
 
-      <p className="max-w-4xl mx-auto text-lg text-gray-600 leading-8">
+      <p className="max-w-4xl mx-auto text-lg text-slate-300 leading-8">
         LOOMIC TECH Pvt Ltd is a modern technology training and software
-        solutions company helping students build practical IT skills through
-        live training, internships, real-time projects and expert mentorship.
+        solutions company focused on creating skilled professionals through
+        practical learning, internships, real-time projects and expert mentorship.
       </p>
     </div>
 
-    {/* Founder Card */}
-    <div className="bg-white rounded-3xl shadow-xl p-10 mb-14 border border-blue-100">
-      <h3 className="text-3xl font-bold text-blue-700 mb-4">
+    {/* Founder */}
+    <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-10 shadow-2xl mb-14 border border-white/10">
+      <h3 className="text-3xl font-bold text-cyan-300 mb-4">
         Founder – Tamil Selvam
       </h3>
 
-      <p className="text-gray-700 leading-8 text-lg">
-        LOOMIC TECH was founded by <strong>Tamil Selvam</strong> with the goal
-        of creating a practical learning platform where students can gain
-        industry-ready knowledge through real-world project training,
-        internships and professional guidance.
+      <p className="text-slate-200 leading-8 text-lg">
+        LOOMIC TECH was founded by <strong>Tamil Selvam</strong> with the vision
+        of helping students learn industry-ready technology skills through
+        practical exposure, project development and career-focused IT training.
       </p>
     </div>
 
-    {/* Vision & Mission */}
+    {/* Vision + Mission */}
     <div className="grid md:grid-cols-2 gap-10 mb-14">
 
-      <div className="bg-white rounded-3xl p-8 shadow-lg border-l-4 border-blue-600">
-        <h3 className="text-2xl font-bold text-blue-700 mb-4">
+      <div className="bg-white/10 rounded-3xl p-8 border border-cyan-400/20">
+        <h3 className="text-2xl font-bold text-cyan-300 mb-4">
           Our Vision
         </h3>
 
-        <p className="text-gray-700 leading-8">
-          To empower students with practical technology education and become a
-          trusted platform for career growth in the IT industry.
+        <p className="text-slate-200 leading-8">
+          To become a trusted technology learning platform where students build
+          practical skills, gain confidence and grow into successful IT professionals.
         </p>
       </div>
 
-      <div className="bg-white rounded-3xl p-8 shadow-lg border-l-4 border-green-500">
-        <h3 className="text-2xl font-bold text-blue-700 mb-4">
+      <div className="bg-white/10 rounded-3xl p-8 border border-green-400/20">
+        <h3 className="text-2xl font-bold text-cyan-300 mb-4">
           Our Mission
         </h3>
 
-        <p className="text-gray-700 leading-8">
-          To deliver hands-on training, real-time projects, internships,
-          certification and placement support to students at affordable cost.
+        <p className="text-slate-200 leading-8">
+          To provide affordable, practical and industry-focused training with
+          internships, certifications, live projects and placement support.
         </p>
+      </div>
+
+    </div>
+
+    {/* Features */}
+    <div className="grid md:grid-cols-3 lg:grid-cols-6 gap-6">
+
+      <div className="bg-white/10 rounded-2xl p-6 text-center">
+        <div className="text-4xl mb-3">💻</div>
+        <h4 className="font-semibold">Live Training</h4>
+      </div>
+
+      <div className="bg-white/10 rounded-2xl p-6 text-center">
+        <div className="text-4xl mb-3">🚀</div>
+        <h4 className="font-semibold">Real-Time Projects</h4>
+      </div>
+
+      <div className="bg-white/10 rounded-2xl p-6 text-center">
+        <div className="text-4xl mb-3">📜</div>
+        <h4 className="font-semibold">Certificate</h4>
+      </div>
+
+      <div className="bg-white/10 rounded-2xl p-6 text-center">
+        <div className="text-4xl mb-3">👨‍🏫</div>
+        <h4 className="font-semibold">Expert Mentors</h4>
+      </div>
+
+      <div className="bg-white/10 rounded-2xl p-6 text-center">
+        <div className="text-4xl mb-3">🎯</div>
+        <h4 className="font-semibold">Placement Support</h4>
+      </div>
+
+      <div className="bg-white/10 rounded-2xl p-6 text-center">
+        <div className="text-4xl mb-3">🏆</div>
+        <h4 className="font-semibold">Internship Program</h4>
       </div>
 
     </div>
 
     {/* Stats */}
-    <div className="grid md:grid-cols-3 gap-8 mb-14">
+    <div className="grid md:grid-cols-3 gap-8 mt-16">
 
-      <div className="bg-blue-600 text-white rounded-3xl p-10 text-center shadow-lg">
-        <h3 className="text-4xl font-bold mb-2">700+</h3>
+      <div className="bg-cyan-500 rounded-3xl p-10 text-center text-black font-bold">
+        <h3 className="text-4xl mb-2">700+</h3>
         <p>Projects Completed</p>
       </div>
 
-      <div className="bg-green-500 text-white rounded-3xl p-10 text-center shadow-lg">
-        <h3 className="text-4xl font-bold mb-2">1200+</h3>
+      <div className="bg-green-500 rounded-3xl p-10 text-center text-black font-bold">
+        <h3 className="text-4xl mb-2">1200+</h3>
         <p>Students Trained</p>
       </div>
 
-      <div className="bg-purple-600 text-white rounded-3xl p-10 text-center shadow-lg">
-        <h3 className="text-4xl font-bold mb-2">150+</h3>
+      <div className="bg-purple-500 rounded-3xl p-10 text-center text-black font-bold">
+        <h3 className="text-4xl mb-2">150+</h3>
         <p>Company Tie-Ups</p>
       </div>
 
     </div>
 
-    {/* Highlights */}
-    <div className="grid md:grid-cols-5 gap-6">
-
-      <div className="bg-white rounded-2xl p-6 shadow-md text-center">
-        <div className="text-4xl mb-3">💻</div>
-        <h4 className="font-semibold">Live Training</h4>
-      </div>
-
-      <div className="bg-white rounded-2xl p-6 shadow-md text-center">
-        <div className="text-4xl mb-3">📜</div>
-        <h4 className="font-semibold">Certificate</h4>
-      </div>
-
-      <div className="bg-white rounded-2xl p-6 shadow-md text-center">
-        <div className="text-4xl mb-3">🚀</div>
-        <h4 className="font-semibold">Real-Time Projects</h4>
-      </div>
-
-      <div className="bg-white rounded-2xl p-6 shadow-md text-center">
-        <div className="text-4xl mb-3">👨‍🏫</div>
-        <h4 className="font-semibold">Expert Mentors</h4>
-      </div>
-
-      <div className="bg-white rounded-2xl p-6 shadow-md text-center">
-        <div className="text-4xl mb-3">🎯</div>
-        <h4 className="font-semibold">Placement Support</h4>
-      </div>
-
-    </div>
-
   </div>
-</section>
+ </section>
 
       {/* CONTACT */}
      {/* CONTACT INFO */}
 <section
-  id="contact"
-  className="py-24 px-6 bg-gradient-to-b from-slate-900 to-black text-white"
+  id="contact"className="py-24 px-6 bg-gradient-to-br from-slate-950 via-blue-950 to-cyan-900 text-white"
 >
   <div className="max-w-7xl mx-auto">
 
@@ -384,11 +415,41 @@ export default function Home() {
           <h3 className="text-xl font-semibold mb-2">🕒 Working Hours</h3>
           <p className="text-gray-300">
             Monday – Saturday | 9:00 AM – 7:00 PM
-          </p>
+          </p>{/* SOCIAL MEDIA + REGISTER */}
+<div className="mt-8 space-y-4">
+
+  <a
+    href="https://docs.google.com/forms/d/e/1FAIpQLSdLr-WCuKRVRkU2wk31pXBTTaUkDjNQKyl15f8v-jJA60_T5g/viewform"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="block w-full text-center bg-cyan-400 hover:bg-cyan-500 text-black font-bold py-4 rounded-2xl transition"
+  >
+    📝 Register for Course
+  </a>
+
+  <a
+    href="https://instagram.com/loomic_tech"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="block w-full text-center bg-pink-500 hover:bg-pink-600 text-white font-semibold py-4 rounded-2xl transition"
+  >
+    📸 Follow us on Instagram — @loomic_tech
+  </a>
+
+  <a
+    href="https://facebook.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 rounded-2xl transition"
+  >
+    👍 Follow us on Facebook — Loomic Tech innovation
+  </a>
+
+</div>
         </div>
 
       </div>
-
+   
       {/* Right */}
       <div className="bg-white rounded-3xl overflow-hidden shadow-2xl">
 
