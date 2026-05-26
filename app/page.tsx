@@ -1,3 +1,4 @@
+import StudentReviews from "./components/StudentReviews";
 export default function Home() {
   const courses = [
     {
@@ -340,7 +341,7 @@ export default function Home() {
 
   </div>
  </section>
-
+<StudentReviews />
       {/* CONTACT */}
      {/* CONTACT INFO */}
 <section
