@@ -522,6 +522,16 @@ export default function Home() {
           UI/UX Student
         </p>
       </div>
+      <div className="text-center mt-10">
+  <a
+    href="https://docs.google.com/forms/d/e/1FAIpQLSeaJk-4mobbXaKdKXtbrRgKIcH5s1WdmXt1v2ZANhq2uEGdnA/viewform"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-block bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-xl font-semibold transition"
+  >
+    Add Your Review
+  </a>
+</div>
 
     </div>
   </div>
