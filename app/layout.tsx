@@ -23,10 +23,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    > <head>
+    <html lang="en"className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
+       <head>
         <meta
           name="google-site-verification"
           content="7plBJ4qtylVoc-WH_xsSiqC8EUpKIQFQgjoaCVMmqhM"
