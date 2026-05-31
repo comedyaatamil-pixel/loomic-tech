@@ -88,7 +88,7 @@ export default function Home() {
           {/* DESKTOP MENU */}
           <nav className="hidden md:flex gap-8 font-medium text-gray-700">
             <a href="#home">Home</a>
-            <a href="#services">Services</a>
+            <a href="#courses">courses</a>
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
           </nav>
@@ -107,7 +107,7 @@ export default function Home() {
           <div className="md:hidden bg-white px-6 pb-6 shadow-md">
             <div className="flex flex-col gap-4 text-gray-700 font-medium">
               <a href="#home" onClick={() => setMenuOpen(false)}>Home</a>
-              <a href="#services" onClick={() => setMenuOpen(false)}>Services</a>
+              <a href="#courses" onClick={() => setMenuOpen(false)}>courses</a>
               <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
               <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
             </div>
