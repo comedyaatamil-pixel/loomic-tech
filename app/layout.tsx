@@ -30,7 +30,23 @@ export default function RootLayout({
           content="7plBJ4qtylVoc-WH_xsSiqC8EUpKIQFQgjoaCVMmqhM"
         />
       </head>
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="relative bg-slate-950 text-white">
+
+  {/* Background Logo Watermark */}
+  <div
+    className="fixed inset-0 z-0 opacity-[0.02] bg-center bg-no-repeat bg-contain pointer-events-none"
+    style={{
+      backgroundImage: "url('/logo.png')",
+      backgroundSize: "300px",
+    }}
+  />
+
+  {/* Website Content */}
+  <div className="relative z-10">
+    {children}
+  </div>
+
+</body>
     </html>
   );
 }

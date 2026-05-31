@@ -1,5 +1,8 @@
+"use client";
+import { useState } from "react";
 import StudentReviews from "./components/StudentReviews";
 export default function Home() {
+  const [menuOpen, setMenuOpen] = useState(false);
   const courses = [
     {
       name: "Python Programming",
@@ -64,86 +67,110 @@ export default function Home() {
   ];
 
   return (
-    <main className="bg-white min-h-screen scroll-smooth">
-
-      {/* HEADER */}
+    <main className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-100">
+    <>
       <header className="sticky top-0 z-50 bg-white shadow-md">
-        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between relative">
+        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
 
+          {/* LOGO */}
           <div className="flex items-center gap-3">
             <img
               src="/logo.png"
-              alt="LOOMIC TECH"
-              className="w-14 h-14 object-contain"
+              alt="Loomic Tech"
+              className="w-12 h-12 object-contain"
             />
 
-            <div>
-              <h1 className="text-2xl font-bold text-blue-700">
-                LOOMIC TECH
-              </h1>
-              <p className="text-xs text-gray-500">
-                Innovate • Inspire • Elevate
-              </p>
-            </div>
+            <h1 className="text-xl md:text-2xl font-bold text-blue-700">
+              LOOMIC TECH
+            </h1>
           </div>
 
-          <nav className="absolute left-1/2 -translate-x-1/2 hidden md:flex gap-10 font-medium text-gray-700">
+          {/* DESKTOP MENU */}
+          <nav className="hidden md:flex gap-8 font-medium text-gray-700">
             <a href="#home">Home</a>
-            <a href="#courses">Courses</a>
-            <a href="#about">About Us</a>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
             <a href="#contact">Contact</a>
           </nav>
 
-          <a
-            href="https://wa.me/918807129618"
-            target="_blank"
-            className="bg-green-500 text-white px-6 py-3 rounded-full font-semibold"
+          {/* MOBILE MENU BUTTON */}
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="md:hidden text-3xl text-blue-700"
           >
-            WhatsApp Us
-          </a>
+            ☰
+          </button>
         </div>
+
+        {/* MOBILE MENU DROPDOWN */}
+        {menuOpen && (
+          <div className="md:hidden bg-white px-6 pb-6 shadow-md">
+            <div className="flex flex-col gap-4 text-gray-700 font-medium">
+              <a href="#home" onClick={() => setMenuOpen(false)}>Home</a>
+              <a href="#services" onClick={() => setMenuOpen(false)}>Services</a>
+              <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
+              <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
+            </div>
+          </div>
+        )}
       </header>
+    </>
+
 <section
   id="home"
-  className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-950 via-blue-950 to-cyan-900 flex items-center"
+  className="relative min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-cyan-900 flex items-center py-16 overflow-hidden"
 >
-  {/* glow background */}
-  <div className="absolute top-10 left-10 w-72 h-72 bg-cyan-400/20 rounded-full blur-3xl animate-pulse"></div>
-  <div className="absolute bottom-10 right-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
+ <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
 
-  <div className="relative z-10 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-
-    {/* LEFT CONTENT */}
+    {/* LEFT */}
     <div className="text-white">
-      <p className="uppercase tracking-[4px] text-cyan-300 mb-4 font-semibold">
-        Welcome to LOOMIC TECH Pvt Ltd
+
+      <p className="uppercase tracking-[4px] text-blue-300 mb-4 font-semibold text-sm">
+        Welcome To Loomic Tech
       </p>
 
-      <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
-        Build Your Career in
-        <span className="block text-cyan-300 mt-2">
-          Technology & Innovation
+      <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+        Start Smart Learning
+        <span className="block text-blue-400 mt-2">
+          Today
         </span>
       </h1>
 
-      <p className="text-slate-200 text-xl leading-8 mb-10">
-        Learn through real-time projects, internships, certification,
-        expert mentors and placement-focused training.
+      <p className="text-slate-200 text-lg leading-8 mt-8 max-w-xl">
+        Industry-oriented internship conducted by Loomic Tech Solutions
+        to make students job-ready with hands-on training and real-world projects.
       </p>
+      {/* STATS */}
+      <div className="flex flex-wrap gap-10 mt-10 items-center">
 
-      <div className="flex flex-wrap gap-4">
+        <div>
+          <h3 className="text-3xl font-bold text-green-400">750+</h3>
+          <p className="text-slate-300">Students</p>
+        </div>
+
+        <div>
+          <div className="text-yellow-400 text-2xl">
+            ⭐⭐⭐⭐⭐
+          </div>
+          <p className="text-slate-300">Trusted by many</p>
+        </div>
+
+      </div>
+
+      {/* BUTTONS */}
+      <div className="flex flex-wrap gap-4 mt-10">
         <a
           href="#courses"
-          className="bg-cyan-400 hover:bg-cyan-500 text-black px-8 py-4 rounded-full font-bold transition"
+          className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full font-semibold"
         >
           Explore Courses
         </a>
 
         <a
-          href="https://wa.me/918807129618"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSdLr-WCuKRVRkU2wk31pXBTTaUkDjNQKyl15f8v-jJA60_T5g/viewform?usp=publish-editor"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-bold transition"
+          className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-semibold"
         >
           Join Internship
         </a>
@@ -151,78 +178,495 @@ export default function Home() {
     </div>
 
     {/* RIGHT IMAGE */}
-    <div className="flex justify-center">
-      <img
-        src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1600&auto=format&fit=crop"
-        alt="LOOMIC TECH"
-        className="w-full max-w-xl rounded-3xl shadow-2xl animate-pulse"
-      />
+  <div className="flex justify-center">
+  <img
+    src="/hero-image.png"
+    alt="Loomic Tech"
+    className="w-full max-w-xl rounded-3xl shadow-2xl float-image"
+  />
+</div>
+  </div>
+</section>{/* COURSES */}
+<section
+  id="courses"
+  className="py-20 px-6 bg-gradient-to-br from-slate-950 via-blue-950 to-cyan-900"
+>
+  <div className="max-w-7xl mx-auto">
+  <h2 className="text-3xl md:text-5xl font-bold text-center text-white mb-14">
+  Our Professional Courses
+</h2>
+  <p className="text-center text-slate-300 text-lg mb-12 max-w-3xl mx-auto">
+  Explore industry-focused courses designed with practical training,
+  internships and real-world projects to build your future career.
+</p>
+<div className="overflow-hidden">
+  <div className="course-slider gap-6">
+      {courses.map((course) => (
+        <div
+          key={course.slug}
+          className="min-w-[280px] bg-white rounded-2xl shadow-lg overflow-hidden flex-shrink-0"
+        >
+          <img
+            src={course.image}
+            alt={course.name}
+            className="w-full h-48 object-cover"
+          />
+
+          <div className="p-5">
+            <h3 className="text-xl font-bold text-blue-700">
+              {course.name}
+            </h3>
+
+            <p className="text-gray-600 mt-2">
+              {course.tools}
+            </p>
+
+            <p className="mt-3">✅ Internship Certificate Included</p>
+            <p>✅ Online & Offline Classes</p>
+            <p>✅ Real-Time Projects</p>
+
+            <div className="flex gap-3 mt-5">
+              <a
+                href={`/course/${course.slug}`}
+                className="w-full bg-blue-600 text-white py-3 rounded-xl text-center font-semibold"
+              >
+                Details
+              </a>
+
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdLr-WCuKRVRkU2wk31pXBTTaUkDjNQKyl15f8v-jJA60_T5g/viewform?usp=publish-editor"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full bg-green-500 text-white py-3 rounded-xl text-center font-semibold"
+              >
+                Register
+              </a>
+            </div>
+
+          </div>
+        </div>
+      ))}
+    </div>
+</div>
+  </div>
+</section>
+{/* WHY CHOOSE US + STATS */}
+<section className="py-24 px-6 bg-gradient-to-br from-slate-950 via-blue-950 to-cyan-900 text-white">
+  <div className="max-w-7xl mx-auto">
+
+    {/* Heading */}
+    <div className="text-center mb-16">
+      <span className="bg-orange-100 text-blue-500 px-6 py-2 rounded-full text-sm font-semibold">
+        Why Choose Us
+      </span>
+
+      <h2 className="text-4xl md:text-5xl font-bold mt-6">
+        Why Choose <span className="text-blue-400">LOOMIC TECH</span>
+      </h2>
+
+      <p className="text-slate-300 mt-6 text-lg max-w-3xl mx-auto">
+        Empowering Skills. Building Careers. Your success is our mission.
+      </p>
+    </div>
+
+    {/* Cards */}
+    <div className="grid md:grid-cols-4 gap-8 mb-20">
+
+      <div className="bg-white text-slate-900 rounded-3xl p-8 text-center shadow-xl">
+        <div className="text-5xl mb-5">👨‍🏫</div>
+        <h3 className="text-2xl font-bold mb-4">Industry Experts</h3>
+        <p className="text-gray-600">
+          Learn from professionals with real-world experience.
+        </p>
+      </div>
+
+      <div className="bg-white text-slate-900 rounded-3xl p-8 text-center shadow-xl">
+        <div className="text-5xl mb-5">🎯</div>
+        <h3 className="text-2xl font-bold mb-4">Hands-on Training</h3>
+        <p className="text-gray-600">
+          Practical training with projects and live coding sessions.
+        </p>
+      </div>
+
+      <div className="bg-white text-slate-900 rounded-3xl p-8 text-center shadow-xl">
+        <div className="text-5xl mb-5">🏅</div>
+        <h3 className="text-2xl font-bold mb-4">Certificate Provided</h3>
+        <p className="text-gray-600">
+          Certification after successful completion.
+        </p>
+      </div>
+
+      <div className="bg-white text-slate-900 rounded-3xl p-8 text-center shadow-xl">
+        <div className="text-5xl mb-5">💼</div>
+        <h3 className="text-2xl font-bold mb-4">Internship Opportunities</h3>
+        <p className="text-gray-600">
+          Internship and placement support for students.
+        </p>
+      </div>
+
+    </div>
+
+    {/* Stats */}
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
+
+      <div>
+        <h2 className="text-5xl font-bold text-green-400">50+</h2>
+        <p className="mt-3 text-slate-300">Workshops Conducted</p>
+      </div>
+
+      <div>
+        <h2 className="text-5xl font-bold text-green-400">1000+</h2>
+        <p className="mt-3 text-slate-300">Students Trained</p>
+      </div>
+
+      <div>
+        <h2 className="text-5xl font-bold text-green-400">95%</h2>
+        <p className="mt-3 text-slate-300">Satisfaction Rate</p>
+      </div>
+
+      <div>
+        <h2 className="text-5xl font-bold text-green-400">200+</h2>
+        <p className="mt-3 text-slate-300">Industry Partners</p>
+      </div>
+
+    </div>
+
+    {/* Button */}
+    <div className="flex justify-center mt-16">
+      <a
+        href="#contact"
+        className="bg-green-500 hover:bg-orange-600 text-white px-10 py-4 rounded-2xl text-lg font-semibold"
+      >
+        💬 Get in Touch
+      </a>
     </div>
 
   </div>
-</section>
-      {/* COURSES */}
-     <section
-  id="courses"
-  className="py-24 px-6 bg-gradient-to-br from-slate-950 via-blue-950 to-cyan-900"
->
-        <div className="max-w-7xl mx-auto">
+</section>{/* WHY CHOOSE US */}
+<section className="py-24 px-6 bg-gradient-to-b from-[#081028] via-[#0b1f4d] to-[#102b6a] text-white">
+  <div className="max-w-7xl mx-auto">
 
-          <div className="text-center mb-16">
-           <h2 className="text-4xl font-bold text-white mb-4">        
-              Our Professional Courses
-            </h2>
-          </div>
+    {/* Heading */}
+    <div className="text-center mb-16">
+      <h2 className="text-4xl md:text-5xl font-bold">
+        Key Features of <span className="text-blue-400">LOOMIC TECH</span>
+      </h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {courses.map((course) => (
-              <div
-                key={course.slug}
-                className="bg-white rounded-3xl overflow-hidden shadow-xl"
-              >
-                <img
-                  src={course.image}
-                  alt={course.name}
-                  className="w-full h-56 object-cover"
-                />
+      <p className="text-slate-300 mt-5 text-lg max-w-3xl mx-auto">
+        Empowering Skills. Building Careers. Your success is our mission.
+      </p>
+    </div>
 
-                <div className="p-6">
+    {/* Cards */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-                  <h3 className="text-2xl font-bold text-blue-700 mb-3">
-                    {course.name}
-                  </h3>
+      {[
+        {
+          title: "Industry Experts",
+          icon: "👨‍🏫",
+          desc: "Learn from experienced professionals with real-time industry knowledge.",
+        },
+        {
+          title: "Guaranteed Internship",
+          icon: "🎯",
+          desc: "Internship opportunities with practical project exposure.",
+        },
+        {
+          title: "Job Placement Assistance",
+          icon: "💼",
+          desc: "Resume support and interview guidance for students.",
+        },
+        {
+          title: "Certification",
+          icon: "📄",
+          desc: "Industry-recognized course completion certification.",
+        },
+        {
+          title: "Career Guidance",
+          icon: "🧭",
+          desc: "Personalized career guidance and mentoring.",
+        },
+        {
+          title: "Hackathons & Events",
+          icon: "🚀",
+          desc: "Participate in workshops, coding events and hackathons.",
+        },
+        {
+          title: "Lifetime Access",
+          icon: "🔐",
+          desc: "Access learning resources anytime.",
+        },
+        {
+          title: "Live Projects",
+          icon: "💻",
+          desc: "Work on real-time projects with practical experience.",
+        },
+      ].map((item, index) => (
+        <div
+          key={index}
+          className="bg-white rounded-3xl p-8 text-slate-900 shadow-xl cursor-pointer transition-all duration-500 hover:scale-105 hover:-translate-y-2 hover:shadow-2xl hover:bg-green-500 hover:text-white"
+          >
+          <h3 className="text-2xl font-bold mb-4">
+            {item.icon} {item.title}
+          </h3>
 
-                  <p className="text-slate-300">{course.tools}</p>
-
-                  <p>✅ Internship Certificate Included</p>
-                  <p>✅ Online & Offline Classes</p>
-                  <p>✅ Real-Time Projects</p>
-
-                  <div className="flex gap-3">
-                    <a
-                      href={`/course/${course.slug}`}
-                      className="w-full bg-blue-600 text-white py-3 rounded-xl text-center font-semibold"
-                    >
-                      Details
-                    </a>
-
-                    <a
-                      href="https://docs.google.com/forms/d/e/1FAIpQLSdLr-WCuKRVRkU2wk31pXBTTaUkDjNQKyl15f8v-jJA60_T5g/viewform?usp=publish-editor"
-                      target="_blank"
-                      className="w-full bg-green-500 text-white py-3 rounded-xl text-center font-semibold"
-                    >
-                      Register
-                    </a>
-                  </div>
-
-                </div>
-              </div>
-            ))}
-          </div>
-
+          <p className="text-gray-600 text-lg leading-8">
+            {item.desc}
+          </p>
         </div>
-      </section>
+      ))}
 
+    </div>
+
+    {/* Button */}
+    <div className="flex justify-center mt-16">
+      <a
+        href="#contact"
+        className="bg-green-500 hover:bg-blue-600 text-white px-8 py-4 rounded-2xl font-semibold text-lg shadow-xl transition"
+      >
+        Get in Touch
+      </a>
+    </div>
+
+  </div>
+</section>{/* GET 10% SCHOLARSHIP SECTION */}
+<section
+  className="py-24 px-6 min-h-screen bg-gradient-to-br from-blue-100 via-white to-green-100"
+>
+  <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+
+    {/* LEFT IMAGE */}
+    <div className="flex justify-center">
+      <img
+        src="/scholarship.png"
+        alt="Get 10% Scholarship"
+        className="w-full max-w-md rounded-3xl shadow-2xl hover:scale-105 transition duration-500"
+      />
+    </div>
+
+    {/* RIGHT CONTENT */}
+    <div>
+      <span className="bg-green-100 text-green-700 px-5 py-2 rounded-full font-semibold">
+        🎓 Scholarship Program
+      </span>
+
+      <h2 className="text-4xl md:text-5xl font-bold mt-6 leading-tight text-slate-900">
+        Get
+        <span className="text-blue-600"> 10% Scholarship </span>
+        at
+        <span className="text-green-600"> Loomic Tech</span>
+      </h2>
+
+      <p className="text-gray-600 mt-6 text-lg leading-8">
+        Start your learning journey with Loomic Tech and unlock
+        a special 10% scholarship on selected courses.
+        Learn with real-time projects, internship training,
+        expert mentors and career guidance.
+      </p>
+
+      <div className="mt-8 space-y-4 text-slate-800">
+
+        <div className="flex gap-3 items-center">
+          <span className="bg-green-500 text-white w-8 h-8 rounded-full flex items-center justify-center">✓</span>
+          10% Scholarship on Selected Courses
+        </div>
+
+        <div className="flex gap-3 items-center">
+          <span className="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center">✓</span>
+          Internship & Real-Time Projects
+        </div>
+
+        <div className="flex gap-3 items-center">
+          <span className="bg-green-500 text-white w-8 h-8 rounded-full flex items-center justify-center">✓</span>
+          Certificate & Placement Support
+        </div>
+
+      </div>
+
+      <div className="flex flex-wrap gap-4 mt-10">
+        <a
+    href="https://docs.google.com/forms/d/e/1FAIpQLSdLr-WCuKRVRkU2wk31pXBTTaUkDjNQKyl15f8v-jJA60_T5g/viewform"
+          target="_blank"
+          className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold shadow-lg"
+        >
+          Apply Scholarship
+        </a>
+
+        <a
+          href="https://wa.me/918807129618"
+          target="_blank"
+          className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-xl font-semibold shadow-lg"
+        >
+          Get in Touch
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+</section>{/* WHY LOOMIC TECH IS BEST */}
+<section className="py-24 px-6 bg-gradient-to-b from-[#020617] via-[#081028] to-[#0b1f4d] text-white">
+  <div className="max-w-7xl mx-auto">
+
+    {/* Heading */}
+    <div className="text-center mb-16">
+      <h2 className="text-4xl md:text-6xl font-bold">
+        Why Choose <span className="text-blue-400">Loomic Tech</span>
+      </h2>
+
+      <p className="text-slate-300 mt-5 text-lg">
+        Learn faster. Build real projects. Start your career with confidence.
+      </p>
+    </div>
+
+    {/* Top Labels */}
+    <div className="grid grid-cols-3 gap-4 mb-8 text-center font-semibold">
+      <div></div>
+
+      <div className="bg-blue-600 rounded-xl py-3">
+        ⭐ LOOMIC TECH
+      </div>
+
+      <div className="text-slate-400 py-3">
+        Others
+      </div>
+    </div>
+
+    {/* Comparison Rows */}
+    {[
+      "Job Oriented Syllabus + Career Guidance",
+      "Internship Training",
+      "Lifetime Access + Updates",
+      "Certificate After Completion",
+      "Hackathons & Events",
+      "Industry Mentorship",
+    ].map((item, i) => (
+      <div
+        key={i}
+        className="grid grid-cols-3 items-center bg-white/10 border border-white/10 rounded-2xl px-8 py-6 mb-5"
+      >
+        <div className="text-left text-lg">{item}</div>
+
+        <div className="text-center text-green-400 text-3xl">✓</div>
+
+        <div className="text-center text-red-400 text-3xl">✕</div>
+      </div>
+    ))}
+
+    {/* Progress Bar */}
+    <div className="mt-16 border-t border-white/10 pt-12">
+
+      <div className="flex justify-between mb-3">
+        <span className="font-semibold">LOOMIC TECH</span>
+        <span className="text-green-400">100% Features</span>
+      </div>
+
+      <div className="w-full bg-slate-700 rounded-full h-4">
+        <div className="bg-gradient-to-r from-blue-500 to-cyan-400 h-4 rounded-full w-full"></div>
+      </div>
+
+      <div className="flex justify-between mt-10 mb-3">
+        <span className="font-semibold">Others</span>
+        <span className="text-slate-400">Average</span>
+      </div>
+
+      <div className="w-full bg-slate-700 rounded-full h-4">
+        <div className="bg-slate-500 h-4 rounded-full w-2/3"></div>
+      </div>
+
+    </div>
+
+    {/* Bottom Text */}
+    <div className="text-center mt-16">
+      <h3 className="text-3xl md:text-4xl font-bold">
+        Your dream career starts with
+        <span className="text-blue-400"> Loomic Tech ⚡</span>
+      </h3>
+    </div>
+
+    {/* Buttons */}
+    <div className="flex flex-wrap justify-center gap-5 mt-12">
+      <a
+        href="#courses"
+        className="bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-xl font-semibold"
+      >
+        Explore Courses
+      </a>
+
+      <a
+        href="https://wa.me/918807129618"
+        target="_blank"
+        className="bg-green-500 hover:bg-green-600 px-8 py-4 rounded-xl font-semibold"
+      >
+        Get in Touch
+      </a>
+    </div>
+  </div>
+</section>
+<section className="py-24 px-6 bg-gradient-to-b from-[#03132d] via-[#07224d] to-[#0b3570] overflow-hidden">
+  <div className="max-w-7xl mx-auto">
+
+    {/* Heading */}
+    <div className="text-center mb-14">
+      <h2 className="text-4xl md:text-6xl font-bold text-white">
+        Our Learners Work At
+      </h2>
+
+      <p className="text-slate-300 mt-5 text-lg max-w-3xl mx-auto">
+        Join thousands of successful Loomic Tech learners now working at leading companies worldwide
+      </p>
+    </div><div className="overflow-hidden mt-16">
+  <div className="flex gap-8 animate-marquee w-max items-center">
+
+    {[
+      ["Amazon","https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg"],
+      ["Google","https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"],
+      ["Infosys","https://upload.wikimedia.org/wikipedia/commons/9/95/Infosys_logo.svg"],
+      ["IBM","https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg"],
+      ["Capgemini","https://upload.wikimedia.org/wikipedia/commons/9/9d/Capgemini_201x_logo.svg"],
+      ["Cognizant","https://upload.wikimedia.org/wikipedia/commons/4/43/Cognizant_logo_2022.svg"],
+
+      /* repeat for smooth loop */
+      ["Amazon","https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg"],
+      ["Google","https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"],
+      ["Infosys","https://upload.wikimedia.org/wikipedia/commons/9/95/Infosys_logo.svg"],
+    ].map(([name, logo], i) => (
+      <div
+        key={i}
+        className="bg-white rounded-2xl shadow-xl px-8 py-6 min-w-[220px] h-32 flex flex-col items-center justify-center hover:scale-105 transition"
+      >
+        <img
+          src={logo}
+          alt={name}
+          className="h-10 object-contain"
+        />
+
+        <p className="mt-3 font-semibold text-slate-800">
+          {name}
+        </p>
+      </div>
+    ))}
+
+  </div>
+</div>
+
+    {/* Bottom Button */}
+    <div className="mt-14 flex flex-col md:flex-row justify-center gap-5 items-center">
+
+      <div className="bg-white/10 backdrop-blur-md border border-white/10 text-white px-8 py-4 rounded-full">
+        🚀 Be part of this success story Start Your Journey Today
+      </div>
+
+      <a
+        href="#contact"
+        className="bg-green-500 hover:bg-green-600 text-white px-10 py-4 rounded-2xl font-semibold shadow-lg"
+      >
+        Get in Touch
+      </a>
+
+    </div>
+  </div>
+</section>
       {/* ABOUT */}
      {/* ABOUT US */}
 <section
@@ -463,6 +907,14 @@ export default function Home() {
 
   </div>
 </section>
+<a
+  href="https://wa.me/918807129618"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl text-3xl"
+>
+  💬
+</a>
     </main>
   );
 }
