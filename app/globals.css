@@ -1,94 +1,15 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@keyframes floatImage {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-18px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-
-.float-image {
-  animation: floatImage 4s ease-in-out infinite;
-}
-@keyframes autoSlide {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-.course-slider {
-  display: flex;
-  width: max-content;
-  animation: autoSlide 25s linear infinite;
-}
-@keyframes scrollCourses {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-.course-slider {
-  display: flex;
-  width: max-content;
-  animation: scrollCourses 25s linear infinite;
-}
-
-.course-slider:hover {
-  animation-play-state: paused;
-}
-@keyframes marquee {
-  0% {
-    transform: translateX(0%);
-  }
-
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-.animate-marquee {
-  animation: marquee 22s linear infinite;
-}
-@keyframes marquee {
-  0% {
-    transform: translateX(0%);
-  }
-
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-.animate-marquee {
-  animation: marquee 25s linear infinite;
-}
+:root { color-scheme: light; }
+html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+body { background: #f5f8fd; color: #14233b; font-family: Arial, Helvetica, sans-serif; }
+.hero-grid { background-color: #f7faff; background-image: linear-gradient(rgba(37,99,235,.045) 1px, transparent 1px), linear-gradient(90deg, rgba(37,99,235,.045) 1px, transparent 1px); background-size: 48px 48px; }
+.gradient-text { background: linear-gradient(100deg,#0284c7 0%,#2563eb 52%,#4f46e5 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.filter-scroll { scrollbar-width: thin; scrollbar-color: #93c5fd transparent; }
+.project-card { box-shadow: 0 12px 35px rgba(30,64,175,.08); }
+::selection { background: #bfdbfe; color: #10213c; }
+/* Light premium theme refinements */
+header { box-shadow: 0 5px 24px rgba(15, 40, 80, .05); }
+input, select, textarea { color-scheme: light; }
+img { max-width: 100%; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } }
